@@ -1836,46 +1836,6 @@
   <!--=================================
     Javascript -->
   <!-- JS Global Compulsory (Do not remove)-->
-
-  <script>
-    // Get the current timestamp
-    var currentTime = Date.now();
-
-    // Convert the timestamp to a human-readable format
-    var date = new Date(currentTime);
-    var arabicMonths = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
-    var formattedDate = date.getDate() + " " + arabicMonths[date.getMonth()] + " " + date.getFullYear();
-
-    // Display the timestamp in an HTML element
-    var timestampDisplay = document.getElementById("timestampDisplay");
-    timestampDisplay.textContent = "التاريخ: " + formattedDate;
-
-    function updateTime() {
-      var currentTime = new Date();
-      var hours = currentTime.getHours();
-      var minutes = currentTime.getMinutes();
-      var seconds = currentTime.getSeconds();
-      var period = "صباحًا";
-
-      // Convert to 12-hour format
-      if (hours >= 12) {
-        period = "مساءً";
-        hours = hours % 12 || 12;
-      }
-
-      var formattedTime = hours + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds) + " " + period;
-
-      // Display the Time in an HTML element
-      var timeDisplay = document.getElementById("timeDisplay");
-      timeDisplay.textContent = "الوقت: " + formattedTime;
-    }
-
-    // Update date and time every second
-    setInterval(updateTime, 1000);
-
-    updateTime();
-
-  </script>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/popper/popper.min.js"></script>
   <script src="js/bootstrap/bootstrap.min.js"></script>

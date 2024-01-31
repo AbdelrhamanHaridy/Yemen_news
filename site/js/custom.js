@@ -32,9 +32,9 @@ NOTE: This file contains all scripts for the actual Template.
   "use strict";
   var POTENZA = {};
 
-/*************************
-  Predefined Variables
-*************************/
+  /*************************
+    Predefined Variables
+  *************************/
   var $window = $(window),
     $document = $(document),
     $body = $('body');
@@ -44,33 +44,33 @@ NOTE: This file contains all scripts for the actual Template.
   };
 
 
-/*************************
-  Megamenu
-*************************/
+  /*************************
+    Megamenu
+  *************************/
   POTENZA.megamenu = function () {
-    $('.mega-menu ul li').hover(function(){
+    $('.mega-menu ul li').hover(function () {
       $('.mega-menu ul li').removeClass("selected");
       $(this).addClass("selected");
     });
   };
 
-/*************************
-  Sticky
-*************************/
+  /*************************
+    Sticky
+  *************************/
 
-POTENZA.isSticky = function () {
-  $(window).scroll(function(){
-    if ($(this).scrollTop() > 150) {
-       $('.header-sticky').addClass('is-sticky');
-    } else {
-       $('.header-sticky').removeClass('is-sticky');
-    }
-  });
-};
+  POTENZA.isSticky = function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 150) {
+        $('.header-sticky').addClass('is-sticky');
+      } else {
+        $('.header-sticky').removeClass('is-sticky');
+      }
+    });
+  };
 
-/*************************
-  Owl carousel
-*************************/
+  /*************************
+    Owl carousel
+  *************************/
   POTENZA.carousel = function () {
     var owlslider = jQuery("div.owl-carousel");
     if (owlslider.length > 0) {
@@ -149,7 +149,7 @@ POTENZA.isSticky = function () {
       });
     }
   };
-  
+
 
   /*************************
       Magnific Popup
@@ -217,7 +217,7 @@ POTENZA.isSticky = function () {
     if ($('.basic-select').exists()) {
       var select = jQuery(".basic-select");
       if (select.length > 0) {
-        $('.basic-select').select2({dropdownCssClass : 'bigdrop'});
+        $('.basic-select').select2({ dropdownCssClass: 'bigdrop' });
       }
     }
   };
@@ -245,153 +245,190 @@ POTENZA.isSticky = function () {
     Promo Popup
   ****************************************************/
   POTENZA.PromoPopup = function () {
-    if (document.cookie.indexOf('visited=true') == -1){
+    if (document.cookie.indexOf('visited=true') == -1) {
       // load the overlay
       $('#promo-popup').modal('show');
 
-      var year = 1000*60*60*24*365;
+      var year = 1000 * 60 * 60 * 24 * 365;
       var expires = new Date((new Date()).valueOf() + year);
-      document.cookie = "visited=true; expires=" + expires.toUTCString()+";";
+      document.cookie = "visited=true; expires=" + expires.toUTCString() + ";";
     }
   }
 
-/*************************
-  Search
-*************************/
-POTENZA.searchbox = function () {
-  if ($("#search").exists()) {
-    $('a[href="#search"]').on('click', function(event) {
+  /*************************
+    Search
+  *************************/
+  POTENZA.searchbox = function () {
+    if ($("#search").exists()) {
+      $('a[href="#search"]').on('click', function (event) {
         event.preventDefault();
         $('#search').addClass('open');
         $('#search > form > input[type="search"]').focus();
-    });
-    $('#search, #search button.close').on('click keyup', function(event) {
+      });
+      $('#search, #search button.close').on('click keyup', function (event) {
         if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-            $(this).removeClass('open');
+          $(this).removeClass('open');
         }
-    });
-    //Do not include! This prevents the form from submitting for DEMO purposes only!
-    $('form').submit(function(event) {
+      });
+      //Do not include! This prevents the form from submitting for DEMO purposes only!
+      $('form').submit(function (event) {
         event.preventDefault();
         return false;
-    })
-   }
-}
-
-/*************************
-  Banner Style
-*************************/
-POTENZA.BannerStyle = function () {
-  $(".destination-list-item").each(function() {
-      var mainDiv = $(this);
-      mainDiv.children('.destination-item').hover(function() {
-          var bgImage = $(this).data('image');
-          mainDiv.find('.destination-item').removeClass('active');
-          mainDiv.find('.destination-item-img').removeClass(bgImage);
-  mainDiv.find('.destination-item-img').removeClass (function (index, className) {
-    return (className.match (/(^|\s)bg-\S+/g) || []).join(' ');
-  });
-          $('.destination-item-img').addClass(bgImage);
-          $(this).addClass('active');
-      });
-  });
-};
-
-/*************************
-  ShowTime
-*************************/
-POTENZA.ShowTime = function () {
-  if($("#weathertime")[0]){
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var session = "AM";
-    
-    if(h == 0){
-        h = 12;
+      })
     }
-    
-    if(h > 12){
+  }
+
+  /*************************
+    Banner Style
+  *************************/
+  POTENZA.BannerStyle = function () {
+    $(".destination-list-item").each(function () {
+      var mainDiv = $(this);
+      mainDiv.children('.destination-item').hover(function () {
+        var bgImage = $(this).data('image');
+        mainDiv.find('.destination-item').removeClass('active');
+        mainDiv.find('.destination-item-img').removeClass(bgImage);
+        mainDiv.find('.destination-item-img').removeClass(function (index, className) {
+          return (className.match(/(^|\s)bg-\S+/g) || []).join(' ');
+        });
+        $('.destination-item-img').addClass(bgImage);
+        $(this).addClass('active');
+      });
+    });
+  };
+
+  /*************************
+    ShowTime
+  *************************/
+  POTENZA.ShowTime = function () {
+    if ($("#weathertime")[0]) {
+      var date = new Date();
+      var h = date.getHours(); // 0 - 23
+      var m = date.getMinutes(); // 0 - 59
+      var s = date.getSeconds(); // 0 - 59
+      var session = "AM";
+
+      if (h == 0) {
+        h = 12;
+      }
+
+      if (h > 12) {
         h = h - 12;
         session = "PM";
+      }
+
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+
+      var time = h + ":" + m + ":" + s + " " + session;
+      document.getElementById("weathertime").innerText = time;
+      document.getElementById("weathertime").textContent = time;
+      setTimeout(POTENZA.ShowTime, 1000);
     }
-    
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-    
-    var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("weathertime").innerText = time;
-    document.getElementById("weathertime").textContent = time;
-    setTimeout(POTENZA.ShowTime, 1000);
   }
-}
 
 
-/*************************
-  Back To Top
-*************************/
-POTENZA.BackToTop = function () {
-  var progressPath = document.querySelector('.progress-wrap path');
-  var pathLength = progressPath.getTotalLength();
-  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-  progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-  progressPath.style.strokeDashoffset = pathLength;
-  progressPath.getBoundingClientRect();
-  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';    
-  var updateProgress = function () {
-    var scroll = $(window).scrollTop();
-    var height = $(document).height() - $(window).height();
-    var progress = pathLength - (scroll * pathLength / height);
-    progressPath.style.strokeDashoffset = progress;
-  }
-  updateProgress();
-  $(window).scroll(updateProgress); 
-  var offset = 50;
-  var duration = 550;
-  jQuery(window).on('scroll', function() {
-    if (jQuery(this).scrollTop() > offset) {
-      jQuery('.progress-wrap').addClass('active-progress');
-    } else {
-      jQuery('.progress-wrap').removeClass('active-progress');
+  /*************************
+    Back To Top
+  *************************/
+  POTENZA.BackToTop = function () {
+    var progressPath = document.querySelector('.progress-wrap path');
+    var pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+    var updateProgress = function () {
+      var scroll = $(window).scrollTop();
+      var height = $(document).height() - $(window).height();
+      var progress = pathLength - (scroll * pathLength / height);
+      progressPath.style.strokeDashoffset = progress;
     }
-  });       
-  jQuery('.progress-wrap').on('click', function(event) {
-    event.preventDefault();
-    jQuery('html, body').animate({scrollTop: 0}, duration);
-    return false;
-  })
-};
+    updateProgress();
+    $(window).scroll(updateProgress);
+    var offset = 50;
+    var duration = 550;
+    jQuery(window).on('scroll', function () {
+      if (jQuery(this).scrollTop() > offset) {
+        jQuery('.progress-wrap').addClass('active-progress');
+      } else {
+        jQuery('.progress-wrap').removeClass('active-progress');
+      }
+    });
+    jQuery('.progress-wrap').on('click', function (event) {
+      event.preventDefault();
+      jQuery('html, body').animate({ scrollTop: 0 }, duration);
+      return false;
+    })
+  };
 
-/*************************
-  Loader
-*************************/
- POTENZA.loader = function () {
+  /*************************
+    Loader
+  *************************/
+  POTENZA.loader = function () {
     $(".loader").delay(2000).fadeOut("slow");
     $("#overlayer").delay(2000).fadeOut("slow");
- };
+  };
 
-/****************************************************
-     POTENZA Window load and functions
-****************************************************/
-//Window load functions
-$window.on("load", function () {
-});
-//Document ready functions
-$document.ready(function () {
-  POTENZA.megamenu(),
-  POTENZA.isSticky(),
-  POTENZA.carousel(),
-  POTENZA.slickslider(),
-  POTENZA.select2(),
-  POTENZA.rangesliders(),
-  POTENZA.PromoPopup(),
-  POTENZA.searchbox(),
-  POTENZA.BannerStyle(),
-  POTENZA.ShowTime(),
-  POTENZA.loader(),
-  POTENZA.mediaPopups(),
-  POTENZA.BackToTop();
-});
+  /****************************************************
+       POTENZA Window load and functions
+  ****************************************************/
+  //Window load functions
+  $window.on("load", function () {
+  });
+  //Document ready functions
+  $document.ready(function () {
+    POTENZA.megamenu(),
+      POTENZA.isSticky(),
+      POTENZA.carousel(),
+      POTENZA.slickslider(),
+      POTENZA.select2(),
+      POTENZA.rangesliders(),
+      POTENZA.PromoPopup(),
+      POTENZA.searchbox(),
+      POTENZA.BannerStyle(),
+      POTENZA.ShowTime(),
+      POTENZA.loader(),
+      POTENZA.mediaPopups(),
+      POTENZA.BackToTop();
+  });
 })(jQuery);
+
+// Get the current timestamp
+var currentTime = Date.now();
+
+// Convert the timestamp to a human-readable format
+var date = new Date(currentTime);
+var arabicMonths = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
+var formattedDate = date.getDate() + " " + arabicMonths[date.getMonth()] + " " + date.getFullYear();
+
+// Display the timestamp in an HTML element
+var timestampDisplay = document.getElementById("timestampDisplay");
+timestampDisplay.textContent = formattedDate;
+
+function updateTime() {
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var seconds = currentTime.getSeconds();
+  var period = "صباحًا";
+
+  // Convert to 12-hour format
+  if (hours >= 12) {
+    period = "مساءً";
+    hours = hours % 12 || 12;
+  }
+
+  var formattedTime = hours + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds) + " " + period;
+
+  // Display the Time in an HTML element
+  var timeDisplay = document.getElementById("timeDisplay");
+  timeDisplay.textContent = formattedTime;
+}
+
+// Update date and time every second
+setInterval(updateTime, 1000);
+
+updateTime();
