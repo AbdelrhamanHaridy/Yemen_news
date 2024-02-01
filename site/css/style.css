@@ -4319,6 +4319,13 @@ ul.current-news li span.border-end:after {
   margin-right: 30px;
   position: relative;
 }
+
+@media (max-width: 767px) {
+  .blog-post.post-style-05 .blog-image {
+    margin-right: 0;
+  }
+}
+
 .blog-post.post-style-05 .blog-image img {
   border-radius: 6px;
   position: relative;

@@ -872,9 +872,11 @@
     <form>
       <div class="container">
         <div class="row justify-content-md-center">
-          <div class="col-8 position-relative">
-            <input type="search" value="" placeholder="Enter keyword" />
-            <button type="submit" class="btn btn-primary">بحث</button>
+          <div class="col-9 col-sm-8">
+            <div class="search-popup">
+              <input type="search" value="" placeholder="ابحث بالكلمة" />
+              <button type="submit" class="btn btn-primary">بحث</button>
+            </div>
           </div>
         </div>
       </div>
@@ -1440,10 +1442,26 @@
   <!--=================================
   Footer -->
   <footer class="footer">
-    <hr>
     <div class="main-footer">
       <div class="container">
-        <div class="flex-lg-row flex-column justify-content-lg-between align-items-center d-flex gap-4 gap-lg-0">
+        <div class="row justify-content-center align-items-center mt-5">
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h6 class="widget-title text-white">اشترك في نشرتنا الإخبارية</h6>
+              <div class="newsletter">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <p>اشترك في أخبارنا واعرف كل جديد عنا</p>
+                <div class="newsletter-box">
+                  <input type="email" class="form-control" placeholder="البريد الإلكتروني " />
+                  <button type="submit" class="btn btn-primary">
+                    إشترك الآن
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-lg-row mt-5 flex-column justify-content-lg-between align-items-center d-flex gap-4 gap-lg-0">
           <div class="logo">
             <a class="footer-logo" href="index.html"><img class="img-fluid" src="images/logo-light.png"
                 alt="logo" /></a>
@@ -1483,6 +1501,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
