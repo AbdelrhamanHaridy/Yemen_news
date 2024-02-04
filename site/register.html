@@ -15,141 +15,148 @@
 </head>
 
 <body>
+
   <div class="login-page">
-    <div class="d-flex justify-content-center align-items-center">
+    <div class="row">
 
 
-      <div class="card col-lg-6 col-xl-5 col-xxl-4 col-md-8 border">
-        <div class="card-header mb-4">
-          <h2 class="mb-4">تسجيل الدخول من خلال حسابك الشخصي</h2>
-          <p>يمكنك تسجيل الدخول من هنا إذا كنت طالب أو معلم أو ولي أمر</p>
-        </div>
-
-        <div class="card-body">
-          <ul class="nav nav-pills mb-3 d-flex justify-content-between align-items-center" id="pills-tab"
-            role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                <div class="choose-card">
-                  <img src="images/student.png" alt="">
-                  <p>الطالب</p>
-                </div>
-
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                <div class="choose-card">
-                  <img src="images/teacher.png" alt="">
-                  <p>المعلم</p>
-                </div>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
-                <div class="choose-card">
-                  <img src="images/parent.png" alt="">
-                  <p>ولي أمر</p>
-                </div>
-              </button>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-
-              <div class="form pt-3">
-                <div class="mb-3">
-                  <input type="text" name="name" class="form-control" placeholder="الاسم">
-                </div>
-                <div class="mb-3">
-                  <input type="number" name="age" class="form-control" placeholder="العمر">
-
-                </div>
-                <div class="mb-3">
-                  <input type="email" name="email" class="form-control" placeholder="الحساب الشخصي">
-                </div>
-                <div class="mb-3">
-                  <input type="text" name="password" class="form-control" placeholder="الرقم السري">
-                </div>
-                <div class="mb-3">
-                  <input type="checkbox" class="form-check-input" id="accept-policy">
-                  <label class="form-check-label" for="accept-policy">أوافق على الشروط</label>
-                </div>
-
-
-                <button class="btn btn-dark btn-block">تسجيل الدخول</button>
-              </div>
-
-            </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
-              tabindex="0">
-              <div class="form pt-3">
-                <div class="mb-3">
-                  <input type="text" name="name" class="form-control" placeholder="الاسم">
-                </div>
-                <div class="mb-3">
-                  <input type="number" name="age" class="form-control" placeholder="العمر">
-
-                </div>
-                <div class="mb-3">
-                  <input type="email" name="email" class="form-control" placeholder="الحساب الشخصي">
-                </div>
-                <div class="mb-3">
-                  <input type="text" name="password" class="form-control" placeholder="الرقم السري">
-                </div>
-                <div class="mb-3">
-                  <input type="checkbox" class="form-check-input" id="accept-policy">
-                  <label class="form-check-label" for="accept-policy">أوافق على الشروط</label>
-                </div>
-
-
-                <button class="btn btn-dark btn-block">تسجيل الدخول</button>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
-              tabindex="0">
-              <div class="form pt-3">
-                <div class="mb-3">
-                  <input type="text" name="name" class="form-control" placeholder="الاسم">
-                </div>
-                <div class="mb-3">
-                  <input type="number" name="age" class="form-control" placeholder="العمر">
-
-                </div>
-                <div class="mb-3">
-                  <input type="email" name="email" class="form-control" placeholder="الحساب الشخصي">
-                </div>
-                <div class="mb-3">
-                  <input type="text" name="password" class="form-control" placeholder="الرقم السري">
-                </div>
-                <div class="mb-3">
-                  <input type="checkbox" class="form-check-input" id="accept-policy">
-                  <label class="form-check-label" for="accept-policy">أوافق على الشروط</label>
-                </div>
-
-
-                <button class="btn btn-dark btn-block">تسجيل الدخول</button>
-              </div>
-            </div>
-          </div>
-          <div class="tab-content" id="pills-tabContent">
+      <div class="col-lg-6 col-md-8 form-section">
+        <div class="card-section">
+          <div class="card-header mb-4">
+            <h2 class="mb-4">تسجيل الدخول من خلال حسابك الشخصي</h2>
+            <p>يمكنك تسجيل الدخول من هنا إذا كنت طالب أو معلم أو ولي أمر</p>
           </div>
 
-          <p>
-            لديك حساب؟
-            <a href="login.html">سجل الدخول من هنا</a>
-          </p>
+          <div class="card-body">
+            <ul class="nav nav-pills mb-3 d-flex justify-content-between align-items-center" id="pills-tab"
+              role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                  type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                  <div class="choose-card">
+                    <img src="images/student.png" alt="">
+                    <p>الطالب</p>
+                  </div>
 
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-teacher-tab" data-bs-toggle="pill" data-bs-target="#pills-teacher"
+                  type="button" role="tab" aria-controls="pills-teacher" aria-selected="false">
+                  <div class="choose-card">
+                    <img src="images/teacher.png" alt="">
+                    <p>المعلم</p>
+                  </div>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-parent-tab" data-bs-toggle="pill" data-bs-target="#pills-parent"
+                  type="button" role="tab" aria-controls="pills-parent" aria-selected="false">
+                  <div class="choose-card">
+                    <img src="images/parent.png" alt="">
+                    <p>ولي أمر</p>
+                  </div>
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                <div class="form pt-3">
+                  <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="الاسم">
+                  </div>
+                  <div class="mb-3">
+                    <input type="number" name="age" class="form-control" placeholder="العمر">
+
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="الحساب الشخصي">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text" name="password" class="form-control" placeholder="الرقم السري">
+                  </div>
+                  <div class="mb-3">
+                    <input type="checkbox" class="form-check-input" id="accept-policy">
+                    <label class="form-check-label" for="accept-policy">أوافق على الشروط</label>
+                  </div>
+
+
+                  <button class="btn btn-dark btn-block">تسجيل الدخول</button>
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="pills-teacher" role="tabpanel" aria-labelledby="pills-teacher-tab"
+                tabindex="0">
+                <div class="form pt-3">
+                  <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="الاسم">
+                  </div>
+                  <div class="mb-3">
+                    <input type="number" name="age" class="form-control" placeholder="العمر">
+
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="الحساب الشخصي">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text" name="password" class="form-control" placeholder="الرقم السري">
+                  </div>
+                  <div class="mb-3">
+                    <input type="checkbox" class="form-check-input" id="accept-policy">
+                    <label class="form-check-label" for="accept-policy">أوافق على الشروط</label>
+                  </div>
+
+
+                  <button class="btn btn-dark btn-block">تسجيل الدخول</button>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pills-parent" role="tabpanel" aria-labelledby="pills-parent-tab"
+                tabindex="0">
+                <div class="form pt-3">
+                  <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="الاسم">
+                  </div>
+                  <div class="mb-3">
+                    <input type="number" name="age" class="form-control" placeholder="العمر">
+
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="الحساب الشخصي">
+                  </div>
+                  <div class="mb-3">
+                    <input type="text" name="password" class="form-control" placeholder="الرقم السري">
+                  </div>
+                  <div class="mb-3">
+                    <input type="checkbox" class="form-check-input" id="accept-policy">
+                    <label class="form-check-label" for="accept-policy">أوافق على الشروط</label>
+                  </div>
+
+
+                  <button class="btn btn-dark btn-block">تسجيل الدخول</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+            </div>
+
+            <p>
+              لديك حساب؟
+              <a href="login.html">سجل الدخول من هنا</a>
+            </p>
+
+          </div>
         </div>
+
 
 
 
 
       </div>
 
+      <div class="col-lg-6 col-md-4 d-none d-md-block img-section">
+        <img src="images/login.png" alt="">
+      </div>
 
     </div>
   </div>
