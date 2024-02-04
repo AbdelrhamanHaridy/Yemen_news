@@ -1,0 +1,78 @@
+.login-page {
+  background-image: url("../images/login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+.login-page .card {
+  max-width: 100%;
+  padding: 0;
+  display: block;
+  margin-top: 40px;
+}
+.login-page .card .card-body {
+  padding: 10px;
+}
+
+.login-page ul {
+  padding: 0;
+}
+
+.login-page .btr {
+  border-top-right-radius: 5px !important;
+}
+
+.login-page .btl {
+  border-top-left-radius: 5px !important;
+}
+
+.login-page .btn-dark {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.login-page .btn-dark:hover {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.login-page .form {
+  padding: 10px;
+}
+
+.login-page .form input {
+  margin-bottom: 12px;
+  border-radius: 3px;
+}
+
+.login-page .form input:focus {
+  box-shadow: none;
+}
+
+.login-page .form button {
+  margin-top: 20px;
+}
+
+.login-page .choose-card img {
+  width: 100px;
+}
+
+@media (max-width: 500px) {
+  .login-page .choose-card img {
+    width: 80px;
+  }
+}
+@media (max-width: 400px) {
+  .login-page .choose-card img {
+    width: 40px;
+  }
+}
+
+.login-page .choose-card p {
+  margin: 0;
+  margin-top: 5px;
+  color: #232323;
+}
