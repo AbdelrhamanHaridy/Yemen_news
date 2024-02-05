@@ -709,8 +709,17 @@ hr {
   box-shadow: none;
   border-color: #3d70b2;
 }
+.newsletter .newsletter-box {
+  display: grid;
+  grid-template-columns: 1fr auto; /* One column for input and one for button */
+  gap: 10px; /* Adjust as needed */
+}
+
+.newsletter .newsletter-box .form-control {
+  width: 100%; /* Full width input */
+}
 .newsletter .newsletter-box input {
-  margin-bottom: 10px;
+  height: 100%;
 }
 .newsletter .newsletter-box button {
   display: block;
