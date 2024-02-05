@@ -49,8 +49,8 @@ NOTE: This file contains all scripts for the actual Template.
   *************************/
   POTENZA.megamenu = function () {
     $('.mega-menu ul li').hover(function () {
-      $('.mega-menu ul li').removeClass("selected");
-      $(this).addClass("selected");
+      /* $('.mega-menu ul li').removeClass("selected");
+      $(this).addClass("selected"); */
     });
   };
 
