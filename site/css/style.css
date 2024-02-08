@@ -1758,10 +1758,16 @@ hr {
   font-size: 30px;
 }
 
+@media (max-width: 992px) {
+  .news-container {
+    display: none;
+  }
+}
+
 .news-container ul {
   display: flex;
   overflow: hidden;
-  animation: scroll 20s infinite linear;
+  animation: scroll 15s infinite linear;
   padding: 0;
   list-style: none;
 }
@@ -2315,6 +2321,32 @@ ul.current-news li span.border-end:after {
 /*contact us*/
 .contact-info {
   padding-right: 50px;
+}
+.contact-ul span {
+  margin-inline-end: 10px;
+}
+.contact-ul i {
+  font-size: 35px !important;
+}
+.contact-ul li {
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: #25ac75;
+  color: #fff;
+  border-radius: 2px;
+}
+.contact-ul li a {
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .contact-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .contact-info .map-info .map {
   margin-bottom: 15px;
