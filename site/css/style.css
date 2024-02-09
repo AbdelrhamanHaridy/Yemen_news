@@ -10686,3 +10686,125 @@ input[type="radio"]:radio {
 }
 
 /*# sourceMappingURL=../css/style.css.map */
+
+/* Terms */
+
+@-webkit-keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.service-wrapper {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper .icon {
+  width: 60px;
+  height: 60px;
+  line-height: 45px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper .content .title {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-weight: 500;
+}
+
+.service-wrapper .big-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.service-wrapper:hover {
+  -webkit-box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+  box-shadow: 0 10px 25px rgba(47, 60, 78, 0.15) !important;
+  background: #ffffff;
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+  border-color: transparent !important;
+}
+
+.service-wrapper:hover .icon {
+  background: #3d70b2 !important;
+  color: #ffffff !important;
+}
+
+.service-wrapper:hover .big-icon {
+  z-index: -1;
+  opacity: 0.1;
+  font-size: 160px;
+}
+
+.service-wrapper .text-custom {
+  color: #3d70b2 !important;
+}
+
+.service-wrapper .uim-svg {
+  display: inline-block;
+  height: 1em;
+  vertical-align: -0.125em;
+  font-size: inherit;
+  fill: var(--uim-color, currentColor);
+}
+
+.terms-container .search {
+  position: relative;
+  box-shadow: 0 0 40px rgba(61, 112, 178, 0.1);
+}
+
+.terms-container.search input {
+  border: 2px solid #d6d4d4;
+}
+
+.terms-container .search input:focus {
+  box-shadow: none;
+  border: 2px solid #3d70b2;
+}
+
+.terms-container .search .fa-search {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+}
+
+.terms-container .search button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 50px;
+  width: 110px;
+  background: #3d70b2;
+}
+
+@media (max-width: 450px) {
+  .newsletter .newsletter-box {
+    display: block;
+  }
+  .newsletter .newsletter-box input {
+    margin-bottom: 10px;
+  }
+}
